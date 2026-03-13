@@ -1,0 +1,55 @@
+#include <bsd/string.h>
+
+size_t ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t i;
+	int l;
+	int p;
+	int sum;
+
+	i = 0;
+	l = 0;
+	p = 0;
+
+	while (dst[l] != '\0' && l < size)
+	{
+		l++;
+	}
+	while (src[p] != '\0')
+	{
+		p++;
+	}
+	if (l == size)
+	{
+		return (p + l);
+	}
+	while (src[i] != '\0' && l + i < size - 1)
+	{
+		dst[l + i] = src[i];
+		i++;
+	}
+
+	dst[l + i] = '\0';
+
+	return (l + p);
+}
+
+// # include <stdio.h>
+
+// int main(void)
+// {
+// char test[100];
+// char test2[100];
+
+// strcpy(test, "1234");
+// strcpy(test2, "1234");
+
+// size_t le = strlcat(test, "5678", 1);
+// size_t len = strlcat(test, "915555", 7);
+// printf("%s\n", test);
+// printf("lenght = %zu\n\n", len);
+// size_t le1 = ft_strlcat(test2, "5678", 1);
+// size_t len1 = ft_strlcat(test2, "915555", 7);
+// printf("%s\n", test2);
+// printf("lenght = %zu\n\n", len1);
+// }
