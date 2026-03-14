@@ -1,20 +1,32 @@
-void *ft_memcpy(void *dest, const void *src, int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/13 17:35:24 by tkroon            #+#    #+#             */
+/*   Updated: 2026/03/13 18:11:02 by tkroon           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-   char *str1;
-   const char *str2;
-   
+	char			*str1;
+	const char	*str2;
+
 	str1 = dest;
-   str2 = src;
-
-while ( n > 0)
-{
-   *str1 = *str2;
-   str2++;
-   str1++;
-   n--;
-}
-return (dest);
-
+	str2 = src;
+	while (n > 0)
+	{
+		*str1 = *str2;
+		str2++;
+		str1++;
+		n--;
+	}
+	return (dest);
 }
 
 // #include <stdio.h>

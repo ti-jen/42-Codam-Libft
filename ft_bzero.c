@@ -1,21 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/13 16:49:22 by tkroon            #+#    #+#             */
+/*   Updated: 2026/03/13 17:04:31 by tkroon           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
-void *ft_bzero(void *s, int n)
+void	*ft_bzero(void *s, size_t n)
 {
-	char *p;
+	char	*p;
+
 	p = s;
-	while ( n > 0)
+	while (n > 0)
 	{
 		*p = '\0';
 		p++;
 		n--;
 	}
-	return(s);
-	
+	return (s);
 }
-
 
 // int main()
 // {

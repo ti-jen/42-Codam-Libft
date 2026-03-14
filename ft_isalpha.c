@@ -1,14 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/13 17:01:37 by tkroon            #+#    #+#             */
+/*   Updated: 2026/03/14 10:21:23 by tkroon           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha (int i)
+int	ft_isalpha(int c)
 {
-    if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z'))
-    {
-        return (1);
-    }
-
-    return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	return (0);
 }
-
 
 // #include <stdio.h>
 // #include <ctype.h>
@@ -19,7 +28,5 @@ int ft_isalpha (int i)
 
 //     printf("%i\n", isalpha(c));
 //     printf("%i", ft_isalpha(c));
-
-
 
 // }

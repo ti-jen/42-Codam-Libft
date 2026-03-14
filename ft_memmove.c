@@ -1,22 +1,34 @@
-void *ft_memmove(void *dest, const void *src, int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/13 17:50:11 by tkroon            #+#    #+#             */
+/*   Updated: 2026/03/13 17:54:24 by tkroon           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-   char *str1;
-   const char *str2;
+	char			*str1;
+	const char	*str2;
 
 	str1 = dest;
-   str2 = src;
-
-while ( n > 0)
-{
-   str1[n - 1] = str2[n - 1];
-   n--;
-}
-return (dest);
-
+	str2 = src;
+	while (n > 0)
+	{
+		str1[n - 1] = str2[n - 1];
+		n--;
+	}
+	return (dest);
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
 // int main ()
 // {

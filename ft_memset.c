@@ -1,21 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/13 17:54:55 by tkroon            #+#    #+#             */
+/*   Updated: 2026/03/13 18:01:05 by tkroon           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
-void *ft_memset(void *s, int c, int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	char *p;
+	char	*p;
+
 	p = s;
-	while ( n > 0)
+	while (n > 0)
 	{
 		*p = c;
 		p++;
 		n--;
 	}
-	return(s);
-	
+	return (s);
 }
-
 
 // int main()
 // {
