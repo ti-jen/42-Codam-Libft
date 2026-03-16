@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 17:50:11 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/13 17:54:24 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/16 14:04:40 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char			*str1;
-	const char	*str2;
+	const char		*str2;
 
 	str1 = dest;
 	str2 = src;
