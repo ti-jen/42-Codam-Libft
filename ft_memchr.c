@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 13:10:31 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/14 13:43:22 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/17 15:21:46 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (str[i] == c)
 		{
-			return ((char *) &s[i]);
+			return ((char *) &str[i]);
 		}
 		i++;
 	}

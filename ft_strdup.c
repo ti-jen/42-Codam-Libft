@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 14:12:21 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/16 14:14:34 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/17 11:46:41 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *s)
 	{
 		l++;
 	}
-	res = malloc((l * 4) + 1);
+	res = malloc((l * 4));
 	while (s[i] != '\0')
 	{
 		res[i] = s[i];

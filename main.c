@@ -16,9 +16,9 @@ int main() {
 	printf("isascii %i\n\n", isascii(c));
 	printf("ft_isdigit %i\n", ft_isdigit(c));
 	printf("isdigit %i\n\n", isdigit(c));
-	printf("ft_strlen %d\n", ft_strlen(word));
+	printf("ft_strlen %ld\n", ft_strlen(word));
 	printf("strlen %ld\n\n", strlen(word));
-	printf("ft_strlen %d\n", ft_strlen(word));
+	printf("ft_strlen %ld\n", ft_strlen(word));
 	printf("strlen %ld\n\n", strlen(word));
 
 
