@@ -24,16 +24,21 @@ char *ft_itoa(int n)
 	int i;
 	int in;
 	char	*res;
-	
 	in = n;
-	l = 1;
-	while (in > 9)
+	l = 0;
+	while (in != 0)
 	{
 		l++;
 		in = in /10;
 	}
 	res = ft_calloc(l, 4);
-	l--;
+	if (n < 0)
+	{
+		n = -n;
+		res[0] = '-';
+	}
+		else
+		l--;
 	while ( n > 0)
 	{
 		res[l] = n % 10 + '0';
@@ -45,6 +50,6 @@ char *ft_itoa(int n)
 
 int main (void)
 {
-	char *test = ft_itoa(23414643);
+	char *test = ft_itoa(-12345678);
 	printf("%s", test);
 }
