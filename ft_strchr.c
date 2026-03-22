@@ -6,21 +6,22 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 10:34:47 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/14 11:32:17 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/20 11:05:34 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	l;
 
+	l = c;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == l)
 		{
 			return ((char *) &s[i]);
 		}

@@ -6,23 +6,30 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 12:59:09 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/16 14:11:49 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/22 12:51:09 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+// #include <stdio.h>
+// #include <string.h>
+// #include "libft.h"
+#include <stddef.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int		res;
-	int		*array;
-	size_t	i;
+	unsigned char	*array;
+	size_t			i;
 
 	i = 0;
-	res = nmemb * size;
-	array = malloc(res);
-	while (i <= nmemb)
+	if (nmemb * size == 0)
+		return (malloc(0));
+	if (nmemb > 2147483647 || size > 2147483647)
+		return (NULL);
+	array = malloc(nmemb * size);
+	if (array == NULL)
+		return (NULL);
+	while (i < nmemb * size)
 	{
 		array[i] = 0;
 		i++;
@@ -32,25 +39,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 // int main (void)
 // {
-// 	int *array1;
-// 	int *array2;
-// 	int i = 0;
-
-// 	array1 = (int*)calloc(21, 4);
-// 	array2 = (int*)ft_calloc(21, 4);
-
-// 	// 	while (i <= 21)
-// 	// {
-// 	// 	array1[i] = i;
-// 	// 	array2[i] = i;
-// 	// 	++i;
-// 	// }
-
-// 	i = 0;
-// 	while (i <= 21)
+// 	void *p = ft_calloc(3, -5);
+// 	if (p == NULL)
 // 	{
-// 		printf ("arr 1=%i :%d\n", i, array1[i]);
-// 		printf ("arr 2=%i :%d\n", i, array2[i]);
-// 		++i;
+// 		printf("yes");
 // 	}
 // }

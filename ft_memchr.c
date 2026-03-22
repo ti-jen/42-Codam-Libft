@@ -6,23 +6,24 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 13:10:31 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/17 15:21:46 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/20 11:04:20 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*str;
+	unsigned char	l;
 
+	l = c;
 	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == l)
 		{
 			return ((char *) &str[i]);
 		}
@@ -31,13 +32,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
+// #include <stdio.h>
+
 // int main (void)
 // {
-// 	char* str = "ABCHDEFGHIJKL";
+// 	char str[] = {0, 1, 2, 3, 4, 5};
 // 	int c = 'G';
 // 	int l = 20;
-// 	char *res = memchr(str, c, l);
-// 	char *res2 = ft_memchr(str, c, l);
+// 	char *res = memchr(str, 2 + 256, 3);
+// 	char *res2 = ft_memchr(str, 2 + 256, 3);
 
 // 	printf("%s\n", res);
 // 	printf("%s\n", res2);

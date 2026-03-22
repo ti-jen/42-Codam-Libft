@@ -6,16 +6,17 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 14:12:21 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/17 11:46:41 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/22 13:11:26 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
-	unsigned long	i;
-	unsigned long	l;
+	int				i;
+	int				l;
 	char			*res;
 
 	i = 0;
@@ -24,7 +25,9 @@ char	*ft_strdup(const char *s)
 	{
 		l++;
 	}
-	res = malloc((l * 4));
+	res = malloc((l + 1));
+	if (res == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		res[i] = s[i];
@@ -39,7 +42,7 @@ char	*ft_strdup(const char *s)
 
 // int main (void)
 // {
-// 	char source[] = "SuperTestStuff";
+// 	char source[] = "coucou";
 
 // 	char* target = strdup(source);
 // 	char* target2 = ft_strdup(source);

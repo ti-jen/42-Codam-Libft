@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 11:48:30 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/17 16:09:15 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/22 09:59:21 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 			res[i] = s1[i];
 		else
 			res[i] = s2[i - la];
+		printf("%i = %c\n", i, res[i]);
 		i++;
 	}
 	return (res);
@@ -46,6 +47,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // 	char string1[] = "12345";
 // 	char string2[] = "ABCDEF";
 
-// 	printf("%s",ft_strjoin(string1, string2));
+// 	char *string3 = ft_strjoin(string1, string2);
 
+// 	printf("%s", string3);
+
+// 	free(string3);
 // }

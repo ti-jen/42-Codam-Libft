@@ -6,14 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 15:36:17 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/14 12:06:15 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/20 12:01:05 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <string.h>
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	int				comp;
 	unsigned int	i;
@@ -22,7 +19,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	comp = 0;
 	while (!(i == n) && (comp == 0) && !(s1[i] == '\0' && s2[i] == '\0'))
 	{
-		comp = s1[i] - s2[i];
+		comp = (unsigned char)s1[i] - (unsigned char)s2[i];
 		i++;
 	}
 	return (comp);
@@ -31,10 +28,10 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 // #include <stdio.h> 
 // int main (void)
 // {
-// 	char myStr1[] = "ABCDDA";
-// 	char myStr2[] = "AB";
-// 	int size = 4;
+// 	char str1[] = {-0, -1, -2, -3, -4, -5};
+// 	char str2[] = {-0, -1, -2, -3, -4, -5};
+// 	size_t		len = strlen((const char *)str1);
 
-// 	printf("%d\n", strncmp(myStr1, myStr2, size));
-// 	printf("%d", ft_strncmp(myStr1, myStr2, size));
+// 	printf("%d\n", strncmp((const char *)str1, (const char *)str2, len));
+// 	printf("%d", ft_strncmp((const char *)str1, (const char *)str2, len));
 // }

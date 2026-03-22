@@ -6,30 +6,32 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 10:34:47 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/14 11:56:27 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/20 11:14:50 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	int	p;
+	int				i;
+	int				p;
+	unsigned char	l;
 
+	l = c;
 	p = -1;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == l)
 		{
 			p = i;
 		}
 		i++;
 	}
-	if (c == '\0')
+	if (l == '\0')
 		return ((char *) &s[i]);
-	if (p > 0)
+	if (p >= 0)
 		return ((char *) &s[p]);
 	return (NULL);
 }
@@ -38,8 +40,8 @@ char	*ft_strrchr(const char *s, int c)
 
 // int main (void)
 // {
-// 	const char* str = "ABCDEFGHIJKLKJIHGFEDCBA";
-// 	int c = 'J';
+// 	char str[] = "tripouille";
+// 	int c = 't';
 
 // 	printf("%s\n", strrchr(str, c));
 // 	printf("%s\n", ft_strrchr(str, c));
