@@ -6,12 +6,12 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 14:49:40 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/18 16:29:07 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/20 10:22:41 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -33,15 +33,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 
 	return (res);
-}
-
-char	ft_toupper(int n, char c)
-{
-	if (c >= 'a' && c <= 'z')
-	{
-		c = c - 32;
-	}
-	return (c);
 }
 
 // int main (void)

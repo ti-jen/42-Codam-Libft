@@ -6,18 +6,20 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 10:03:00 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/18 11:05:23 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/23 13:28:08 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include <stdio.h>
 
 static int	ft_intlength(int n)
 {
 	int	l;
 
 	l = 0;
+	if (n == 0)
+		return (1);
 	while (n != 0)
 	{
 		l++;
@@ -26,34 +28,44 @@ static int	ft_intlength(int n)
 	return (l);
 }
 
-char	*ft_itoa(int n)
+static char	*itstr(char	*res, long in, int l)
 {
-	int		l;
-	int		i;
-	char	*res;
-
-	l = ft_intlength(n);
-	res = ft_calloc(l, 4);
-	if (res == NULL)
-		return (NULL);
-	if (n < 0)
+	res[l] = '\0';
+	if (in < 0)
 	{
-		n = -n;
+		in = -in;
 		res[0] = '-';
 	}
-	else
-		l--;
-	while (n > 0)
+	l--;
+	if (in == 0)
+		res[l] = '0';
+	while (in > 0)
 	{
-		res[l] = n % 10 + '0';
-		n = n / 10;
+		res[l] = in % 10 + '0';
+		in = in / 10;
 		l--;
 	}
 	return (res);
 }
 
+char	*ft_itoa(int n)
+{
+	long	in;
+	int		l;
+	char	*res;
+
+	in = n;
+	l = ft_intlength(in);
+	if (in < 0)
+		l++;
+	res = malloc(l + 1);
+	if (res == NULL)
+		return (NULL);
+	itstr(res, in, l);
+	return (res);
+}
+
 // int main (void)
 // {
-// 	char *test = ft_itoa(-20213854);
-// 	printf("%s", test);
+// 	char *test = ft_itoa(0);
 // }

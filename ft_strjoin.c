@@ -6,12 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 11:48:30 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/22 09:59:21 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/22 15:23:01 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -27,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		la++;
 	while (s2[lb] != '\0')
 		lb++;
-	res = malloc(((la + lb) * 4));
+	res = malloc(((la + lb)+ 1));
 	if (res == NULL)
 		return (NULL);
 	while (i <= (la + lb))
@@ -36,7 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 			res[i] = s1[i];
 		else
 			res[i] = s2[i - la];
-		printf("%i = %c\n", i, res[i]);
 		i++;
 	}
 	return (res);

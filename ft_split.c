@@ -6,25 +6,34 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 14:42:59 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/18 16:29:07 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/23 12:52:15 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_count(char const *str, int n)
 {
 	int	i;
 	int	count;
+	int	word;
 
+	word = 1;
 	i = 0;
 	count = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == n)
-			count++;
 		i++;
+		while (str[i] == n && str[i] != '\0')
+		{
+			i++;
+			word = 1;
+		}
+		if (word && str[i] != '\0')
+			count++;
+		word = 0;
 	}
 	return (count);
 }
@@ -49,24 +58,25 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		p;
 	int		j;
-	int		l;
 
-	i = 0;
 	p = 0;
 	j = 0;
-	l = ft_count(s, c) + 1;
-	id = malloc(l * 4);
-	while (j < l && ft_count(s, c) != 0)
+	id = malloc(sizeof(char *) * (ft_count(s, c) + 1));
+	if (id == NULL)
+		return (NULL);
+	while (ft_count(s, c) > j)
 	{
-		if (s[i] == c)
-		{
-			id[j] = malloc(((i - p) + 1) * 4);
-			id[j] = ft_strncpy(id[j], &s[p], i - p);
-			j++;
-			p = i;
-		}
-		i++;
+		while (s[p] == c && s[p] != '\0')
+			p++;
+		i = p;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+		id[j] = malloc(((i - p) + 1));
+		ft_strncpy(id[j], &s[p], i - p);
+		p = i;
+		j++;
 	}
+	id[j] = NULL;
 	return (id);
 }
 
@@ -76,13 +86,14 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char **arr;
 
-// 	arr = ft_split("split--splut-sploet", '-');
+// 	char * splitme = strdup("Tripouille");
+// 	arr = ft_split( splitme, ' ');
 
-// 	int i = 0;
-// 	while (i < 4)
-// 	{
-// 	printf("%s\n", arr[i]);
-// 	i++;
-// 	}
+// 	// int i = 0;
+// 	// while (i <= 5)
+// 	// {
+// 	// printf("%i == %s\n",i, arr[i]);
+// 	// i++;
+// 	// }
 
 // }

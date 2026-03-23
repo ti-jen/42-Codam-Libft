@@ -6,14 +6,14 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 11:06:26 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/18 11:09:19 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/22 15:46:16 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-const int	ft_checksim(int const n, char const *set)
+static int	ft_checksim(int const n, char const *set)
 {
 	int	i;
 
@@ -39,12 +39,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	l = 0;
 	while (s1[i] != '\0')
 	{
-		while (ft_checksim(s1[i], set))
-			i++;
+		if (!ft_checksim(s1[i], set))
+			l++;
 		i++;
-		l++;
 	}
-	res = malloc(l * 4);
+	res = malloc(l + 1);
 	if (res == NULL)
 		return (NULL);
 	while (l >= 0)
@@ -60,9 +59,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main (void)
 // {
-// 	char string1[] = "AB1268473625234CD4325721268342E";
-// 	char string2[] = "12345A6789";
 
-// 	printf("%s",ft_strtrim(string1, string2));
+// 	printf("%s",ft_strtrim("tripouille   xxx", " x"));
 
 // }
