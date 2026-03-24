@@ -6,12 +6,13 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 11:41:12 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/19 13:08:57 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 14:51:08 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -19,7 +20,7 @@ t_list	*ft_lstnew(void *content)
 
 	l = (t_list *)malloc(sizeof(t_list));
 	l->content = content;
-	l -> next = NULL
+	l -> next = NULL;
 	return (l);
 }
 

@@ -5,18 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/19 15:19:03 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/19 15:24:59 by tkroon           ###   ########.fr       */
+/*   Created: 2026/03/24 11:06:39 by tkroon            #+#    #+#             */
+/*   Updated: 2026/03/24 11:43:37 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+#include "libft.h"
+#include <stdlib.h>
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list* temp = *lst;
-	
-	while(temp)
+	t_list	*temp;
+
+	temp = lst;
+	while (temp)
 	{
-		f(lst->content);
-		temp = temp->next;
+		f(temp->content);
+		temp = temp-> next;
 	}
 }
+
+// int main (void)
+// {
+// 	t_list *first = (t_list *)malloc(sizeof(t_list));
+// 	t_list *second = (t_list *)malloc(sizeof(t_list));
+// 	t_list *third = (t_list *)malloc(sizeof(t_list));
+
+// 	third->next = NULL;
+// 	second->next = third;
+// 	first->next = second;
+
+// 	ft_lstiter(first, stuff)
+
+// }

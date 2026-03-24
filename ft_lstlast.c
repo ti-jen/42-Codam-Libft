@@ -6,13 +6,13 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:34:00 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/19 14:30:42 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 10:17:46 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // #include <stdio.h>
-#include <stdlib.h>
+// #include <stdlib.h>
 
 // typedef struct s_list
 // {
@@ -20,14 +20,9 @@
 // struct s_list *next;
 // } t_list;
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	new->next = (*lst);
-}
-
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list* temp = (*lst);
+	t_list* temp = lst;
 	while (temp)
 	{
 		if (temp-> next == NULL)

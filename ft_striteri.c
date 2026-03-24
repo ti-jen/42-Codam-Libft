@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 16:09:03 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/18 16:41:47 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/23 13:54:56 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,21 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != '\0')
 	{
-		f(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 }
 
-// void	ft_toupper(unsigned int n, char *c)
-// {
-// 	if (c[n] >= 'a' && c[n] <= 'z')
-// 	{
-// 		c[n] = c[n] - 32;
-// 	}
+// void
+// iter(unsigned int i, char * s) {
+// 	*s += i;
 // }
 
 // #include <stdio.h>
 
 // int main (void)
 // {
-// 	char test[20] = "abcdddr124efgh";
-// 	ft_striteri(test, ft_toupper);
+// 	char s[] = "0000000000";
+// 	ft_striteri(s, iter);
 // 	printf("%s",test);
 // }
