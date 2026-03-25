@@ -6,19 +6,13 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:18 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 17:12:47 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:03:55 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stddef.h>
-
-// typedef struct s_list
-// {
-// void *content;
-// struct s_list *next;
-// } t_list;
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -49,21 +43,21 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 	return (l);
 // }
 
+// #include <stdio.h>
 // int main (void)
 // {
 // 	t_list * l =  NULL;
 // 	t_list * l2 =  NULL;
-// 	ft_lstadd_back(&l, ft_lstnew((void*)1));
-// 	ft_lstadd_back(&l, ft_lstnew((void*)2));
-// 	ft_lstadd_back(&l, ft_lstnew((void*)3));
-// 	ft_lstadd_back(&l, ft_lstnew((void*)4));
+// 	ft_lstadd_back(&l, ft_lstnew("A1"));
+// 	ft_lstadd_back(&l, ft_lstnew("B2"));
+// 	ft_lstadd_back(&l, ft_lstnew("C3"));
+// 	ft_lstadd_back(&l, ft_lstnew("D4"));
 // 	ft_lstadd_back(&l, l2);
-// 	t_list * temp;
 // 	int i = 0;
-// 	while(i > 4)
+// 	while(i < 4)
 // 	{
-// 		temp = l->next;
-// 		printf("%i",temp->content)
+// 		printf("%i = %s\n", i,  (char*)l->content);
+// 		l = l->next;
 // 		i++;
 // 	}
 // }

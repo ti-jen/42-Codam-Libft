@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 11:45:11 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/23 14:53:39 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:07:13 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,37 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-// typedef struct s_list
-// {
-// void 			*content;
-// struct s_list	*next;
-// }	t_list;
-
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = (*lst);
 	*lst = new;
 }
 
+// t_list	*ft_lstnew(void *content)
+// {
+// 	t_list	*l;
+
+// 	l = (t_list *)malloc(sizeof(t_list));
+// 	l->content = content;
+// 	l -> next = NULL;
+// 	return (l);
+// }
+
+// #include <stdio.h>
 // int main (void)
 // {
-// 	t_list *first = (t_list *)malloc(sizeof(t_list));
-// 	t_list *second = (t_list *)malloc(sizeof(t_list));
-// 	t_list *third = (t_list *)malloc(sizeof(t_list));
-
-// 	ft_lstadd_front(&third, second);
-// 	ft_lstadd_front(&second, first);
+// 	t_list * l =  NULL;
+// 	t_list * l2 =  NULL;
+// 	ft_lstadd_front(&l, ft_lstnew("A1"));
+// 	ft_lstadd_front(&l, ft_lstnew("B2"));
+// 	ft_lstadd_front(&l, ft_lstnew("C3"));
+// 	ft_lstadd_front(&l, ft_lstnew("D4"));
+// 	ft_lstadd_front(&l, l2);
+// 	int i = 0;
+// 	while(i < 3)
+// 	{
+// 		printf("%i = %s\n", i,  (char*)l->content);
+// 		l = l->next;
+// 		i++;
+// 	}
 // }

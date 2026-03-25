@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 17:00:18 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 17:09:26 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:41:40 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	ft_isalnum(int i)
 
 // #include <stdio.h>
 // #include <ctype.h>
-
 // int main ()
 // {
 //     char c = '1';

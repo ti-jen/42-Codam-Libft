@@ -6,12 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 10:03:00 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/23 13:28:08 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:46:22 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 static int	ft_intlength(int n)
 {
@@ -65,7 +64,10 @@ char	*ft_itoa(int n)
 	return (res);
 }
 
+// #include <limits.h>
+// #include <stdio.h>
 // int main (void)
 // {
-// 	char *test = ft_itoa(0);
+// 	char *test = ft_itoa(INT_MIN);
+// 	printf("%s", test);
 // }

@@ -6,11 +6,10 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 14:12:21 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/22 13:11:26 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:24:46 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s)

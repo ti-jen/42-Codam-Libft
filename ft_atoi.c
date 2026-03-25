@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 14:37:42 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 12:25:09 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:27:35 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,8 @@ int	ft_atoi(const char *nptr)
 // #include <limits.h>
 // int main (void)
 // {
-// char e[] = "475";
-// e[0] = 8;
+// char numb[] = "475";
 
-// printf("%i\n", ft_atoi(e));
-// printf("%i", atoi(e));
+// printf("ft_atoi:\n%i\n", ft_atoi(numb));
+// printf("atoi:\n%i", atoi(numb));
 // }

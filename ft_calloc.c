@@ -6,15 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 12:59:09 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/22 12:51:09 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:41:06 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
-// #include "libft.h"
-#include <stddef.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -37,11 +33,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (array);
 }
 
+// #include <stdio.h>
+// #include <string.h>
 // int main (void)
 // {
-// 	void *p = ft_calloc(3, -5);
+// 	void *p = ft_calloc(3, -6);
+// 	printf("P = ");
 // 	if (p == NULL)
 // 	{
-// 		printf("yes");
+// 		printf("NULL");
 // 	}
 // }

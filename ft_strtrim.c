@@ -6,12 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 11:06:26 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 12:50:16 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:25:37 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-// #include <stdio.h>
 
 static int	ft_checksim(int const n, char const *set)
 {

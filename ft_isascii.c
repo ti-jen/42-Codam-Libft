@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 17:28:16 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/13 17:35:10 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:42:05 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ int	ft_isascii(int i)
 
 // #include <stdio.h>
 // #include <ctype.h>
-
 // int main ()
 // {
-//     int c = 127 ;
+//     int c = 127;
 
 //     printf("%i\n", isascii(c));
 //     printf("%i", ft_isascii(c));

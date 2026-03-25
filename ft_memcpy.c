@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 17:35:24 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 17:09:51 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:19:00 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // int main ()
 // {
 //    // const char src[50] = "123456789";
-//    char dest[50] = "Learningisfun";
-//    char dest2[50] = "Learningisfun";
-//    char dest3[50] = "Learningisfun";
+//    char dest[50] = "Learning";
+//    char dest2[50] = "Learning";
+//    char dest3[50] = "Learning";
 //    printf("Before memcpy dest =  %s\n", dest);
 //    memcpy(dest + 8, dest, 10);
 //    printf("After memcpy dest =     %s\n", dest);

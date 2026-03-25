@@ -6,19 +6,12 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:39:46 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 17:21:47 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:08:27 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 #include <stdlib.h>
-
-// typedef struct s_list
-// {
-// void *content;
-// struct s_list *next;
-// } t_list;
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
@@ -26,6 +19,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 
+// #include <stdio.h>
 // int main (void)
 // {
 // 	t_list *first = (t_list *)malloc(sizeof(t_list));

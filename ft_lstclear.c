@@ -6,18 +6,12 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 10:05:55 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 15:11:18 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:07:31 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-// typedef struct s_list
-// {
-// void *content;
-// struct s_list *next;
-// } t_list;
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

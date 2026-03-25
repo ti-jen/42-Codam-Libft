@@ -6,19 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:34:00 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 17:23:19 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:22:37 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <stdlib.h>
-
-// typedef struct s_list
-// {
-// void *content;
-// struct s_list *next;
-// } t_list;
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -36,6 +28,8 @@ t_list	*ft_lstlast(t_list *lst)
 	return (NULL);
 }
 
+// #include <stdio.h>
+// #include <stdlib.h>
 // int main (void)
 // {
 // 	t_list *first = (t_list *)malloc(sizeof(t_list));

@@ -6,12 +6,11 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 11:14:52 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/16 14:10:19 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:25:19 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <bsd/string.h>
-#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

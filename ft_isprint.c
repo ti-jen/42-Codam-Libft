@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 17:33:04 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/13 17:35:10 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 14:42:20 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_isprint(int i)
 
 // #include <stdio.h>
 // #include <ctype.h>
-
 // int main ()
 // {
 // 	int c = '	' ;

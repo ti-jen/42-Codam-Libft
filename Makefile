@@ -1,16 +1,16 @@
 CC = gcc
-NAME = main
+NAME = libft
 CFLAGS = -Wall -Wextra -Werror
 SRC = ft_*
 
 all: final
 
 final: lib
-	$(CC) $(CFLAGS) $(NAME).c -L. libft.a
+	$(CC) $(CFLAGS) $(NAME).c -L. $(NAME).a
 
 
 lib: comp
-	ar rcs libft.a $(SRC).o
+	ar rcs $(NAME).a $(SRC).o
 
 comp:
 	$(CC) $(CFLAGS) -c $(SRC).c
@@ -19,6 +19,6 @@ clean:
 	rm $(SRC).o || true
 
 fclean: clean
-	rm a.out libft.a || true
+	rm a.out $(NAME).a || true
 
 re: fclean all
