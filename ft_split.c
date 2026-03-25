@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 14:42:59 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 15:24:25 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 15:40:51 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_count(char const *str, int n)
 	return (count);
 }
 
- static char	*ft_strncpy(char *dest, char const *src, unsigned int n)
+static char	*ft_strncpy(char *dest, char const *src, unsigned int n)
 {
 	unsigned int	i;
 

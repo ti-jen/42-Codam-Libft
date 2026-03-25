@@ -2,7 +2,7 @@ This project has been created as part of the 42 curriculum by tkroon
 
 # Libft
 
-a library of various useful function. 
+A library of various useful function. 
 
 ## Description
 
@@ -10,7 +10,7 @@ this goal of this project was to make various functions that will be useful for 
 
 ## Instructions
 
-in this project you can use the Makefile to compile and execute the Libft
+in this project you can use the Makefile to compile and execute the Libft.
 
 ### executing program
 ```
