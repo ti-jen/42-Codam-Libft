@@ -6,26 +6,25 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:16:07 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/23 14:26:52 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 17:17:16 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 
-
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int		i;
+	t_list	*temp;
+
 	i = 0;
-	t_list* temp = lst;
-	while(temp)
+	temp = lst;
+	while (temp)
 	{
-	 temp = temp->next;
+		temp = temp->next;
 		i++;
 	}
-
 	return (i);
 }
 

@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:18 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 15:23:41 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 17:12:47 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-
 // typedef struct s_list
 // {
 // void *content;
 // struct s_list *next;
 // } t_list;
 
-void    ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list    *temp;
-    if (new == NULL || lst == NULL)
-      return;
-    if (*lst == NULL)
-    {
-        *lst = new;
-        return;
-    }
-    temp = (*lst);
-    while (temp-> next)
-    {
-        temp = temp-> next;
-    }
-    temp->next = new;
+	t_list	*temp;
+
+	if (new == NULL || lst == NULL)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	temp = (*lst);
+	while (temp-> next)
+	{
+		temp = temp-> next;
+	}
+	temp->next = new;
 }
 
 // t_list	*ft_lstnew(void *content)

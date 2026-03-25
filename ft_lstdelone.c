@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:39:46 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/20 10:18:10 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 17:21:47 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@
 // struct s_list *next;
 // } t_list;
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	del(lst->content);
-
 	free(lst);
 }
 

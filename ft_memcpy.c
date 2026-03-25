@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 17:35:24 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/13 18:11:02 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 17:09:51 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char			*str1;
-	const char	*str2;
+	const char		*str2;
 
 	str1 = dest;
 	str2 = src;

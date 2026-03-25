@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 11:48:30 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/22 15:23:01 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 17:21:10 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		la++;
 	while (s2[lb] != '\0')
 		lb++;
-	res = malloc(((la + lb)+ 1));
+	res = malloc((la + lb) + 1);
 	if (res == NULL)
 		return (NULL);
 	while (i <= (la + lb))

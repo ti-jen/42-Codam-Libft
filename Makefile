@@ -16,9 +16,9 @@ comp:
 	$(CC) $(CFLAGS) -c $(SRC).c
 
 clean:
-	rm $(SRC).o
+	rm $(SRC).o || true
 
 fclean: clean
-	rm a.out libft.a
+	rm a.out libft.a || true
 
 re: fclean all

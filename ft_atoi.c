@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 14:37:42 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/22 11:28:46 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 12:25:09 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_atoi(const char *nptr)
 	min = 0;
 	i = 0;
 	end = 0;
-	while (nptr[i] <= ' ')
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
 		i++;
 	if (nptr[i] == '-')
 		min++;
@@ -42,8 +42,9 @@ int	ft_atoi(const char *nptr)
 // #include <limits.h>
 // int main (void)
 // {
-// char e[] = "123456";
+// char e[] = "475";
+// e[0] = 8;
 
-// printf("%i\n", ft_atoi("		-1"));
-// printf("%i", atoi("		-1"));
+// printf("%i\n", ft_atoi(e));
+// printf("%i", atoi(e));
 // }

@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:34:00 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 10:17:46 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/24 17:23:19 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list* temp = lst;
+	t_list	*temp;
+
+	temp = lst;
 	while (temp)
 	{
 		if (temp-> next == NULL)

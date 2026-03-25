@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 16:39:47 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/13 16:47:04 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 10:56:20 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,12 @@
 
 size_t	ft_strlen(char *str)
 {
-	int	i;
 	int	count;
 
-	i = 0;
 	count = 0;
-	while (str[i] != 0)
+	while (str[count] != 0)
 	{
-		if (str[i] >= 32)
-		{
-			++count;
-		}
-		++i;
+		count++;
 	}
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 11:06:26 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/22 15:46:16 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/25 12:50:16 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (res);
 }
 
+// #include <stdio.h>
 // int main (void)
 // {
-
-// 	printf("%s",ft_strtrim("tripouille   xxx", " x"));
+// 	char set [] = "\t \n";
+// 	printf("%s",ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", set ));
 
 // }
