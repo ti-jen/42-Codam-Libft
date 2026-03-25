@@ -3,7 +3,7 @@ NAME = libft
 CFLAGS = -Wall -Wextra -Werror
 SRC = ft_*
 
-all: lib
+ar: lib
 
 # final: lib
 # 	$(CC) $(CFLAGS) $(NAME).c -L. $(NAME).a
