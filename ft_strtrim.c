@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 11:06:26 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 15:25:37 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 14:49:48 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,20 @@ static int	ft_checksim(int const n, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static char	*ft_trimrev(char const	*set, char const *s1, int l, int i)
 {
-	int		i;
-	int		l;
 	char	*res;
 
-	i = 0;
-	l = 0;
-	while (s1[i] != '\0')
-	{
-		if (!ft_checksim(s1[i], set))
-			l++;
-		i++;
-	}
 	res = malloc(l + 1);
 	if (res == NULL)
 		return (NULL);
+	res[l] = '\0';
+	i--;
+	l--;
+	while (ft_checksim(s1[i], set))
+		i--;
 	while (l >= 0)
 	{
-		while (ft_checksim(s1[i], set))
-			i--;
 		res[l] = s1[i];
 		i--;
 		l--;
@@ -56,10 +49,31 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (res);
 }
 
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		i;
+	int		l;
+
+	i = 0;
+	l = 0;
+	while (ft_checksim(s1[i], set))
+		i++;
+	while (s1[i] != '\0')
+	{
+		l++;
+		i++;
+	}
+	while (ft_checksim(s1[i - 1], set) && l > 0)
+	{
+		i--;
+		l--;
+	}
+	return (ft_trimrev(set, s1, l, i));
+}
+
 // #include <stdio.h>
 // int main (void)
 // {
-// 	char set [] = "\t \n";
-// 	printf("%s",ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", set ));
+// 	printf("%s",ft_strtrim("lorem ipsum", "m"));
 
 // }

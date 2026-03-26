@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 10:34:47 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/20 11:14:50 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 11:43:45 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ char	*ft_strrchr(const char *s, int c)
 // int main (void)
 // {
 // 	char str[] = "tripouille";
-// 	int c = 't';
+// 	int c = ' ';
 
-// 	printf("%s\n", strrchr(str, c));
+// 	// printf("%s\n", strrchr(str, c));
 // 	printf("%s\n", ft_strrchr(str, c));
 
 // }

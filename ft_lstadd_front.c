@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 11:45:11 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 15:07:13 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 13:15:37 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (new == NULL || lst == NULL)
+		return ;
 	new->next = (*lst);
 	*lst = new;
 }

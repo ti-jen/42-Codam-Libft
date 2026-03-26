@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 16:49:02 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/13 18:03:13 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 11:39:15 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 // char test[100];
 // char test2[100];
 
-// strcpy(test, "1234");
-// strcpy(test2, "1234");
+// strcpy(test, "12");
+// strcpy(test2, "12");
 
-// size_t le = strlcat(test, "5678", 1);
-// size_t len = strlcat(test, "915555", 7);
+// size_t le = strlcat(test, "1235", 5);
+// size_t len = strlcat(test, "111", 7);
 // printf("%s\n", test);
 // printf("lenght = %zu\n\n", len);
-// size_t le1 = ft_strlcat(test2, "5678", 1);
-// size_t len1 = ft_strlcat(test2, "915555", 7);
+// size_t le1 = ft_strlcat(test2, "5678", 5);
+// size_t len1 = ft_strlcat(test2, "915555", 10);
 // printf("%s\n", test2);
 // printf("lenght = %zu\n\n", len1);
 // }

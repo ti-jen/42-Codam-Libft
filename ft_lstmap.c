@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:45:53 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 17:25:08 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 13:26:30 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 
 	new = NULL;
-	if (lst == NULL || f == NULL || del == NULL)
+	if (lst == NULL || f == NULL)
 		return (NULL);
 	while (lst)
 	{

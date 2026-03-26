@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:39:46 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 15:08:27 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 13:16:53 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	if (lst == NULL || del == NULL)
+		return ;
 	del(lst->content);
 	free(lst);
 }

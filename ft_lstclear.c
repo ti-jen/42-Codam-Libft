@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 10:05:55 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/25 15:07:31 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 13:21:34 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*temp;
 	t_list	*tempi;
 
+	if (lst == NULL || del == NULL)
+		return ;
 	temp = *lst;
 	while (temp)
 	{

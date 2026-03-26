@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:06:39 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/24 11:43:37 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 13:23:34 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*temp;
 
+	if (lst == NULL || f == NULL)
+		return ;
 	temp = lst;
 	while (temp)
 	{
