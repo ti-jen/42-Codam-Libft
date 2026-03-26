@@ -19,6 +19,6 @@ clean:
 	rm $(SRC).o || true
 
 fclean: clean
-	rm a.out $(NAME).a || true
+	rm $(NAME).a || true
 
 re: fclean all
