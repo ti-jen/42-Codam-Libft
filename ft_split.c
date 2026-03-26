@@ -6,7 +6,7 @@
 /*   By: tkroon <tkroon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 14:42:59 by tkroon            #+#    #+#             */
-/*   Updated: 2026/03/26 13:35:16 by tkroon           ###   ########.fr       */
+/*   Updated: 2026/03/26 16:03:47 by tkroon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ static int	ft_count(char const *str, int n)
 
 	i = 0;
 	count = 0;
+	if (str[i] != n && str[i] != '\0')
+		count++;
 	while (str[i] != '\0')
 	{
-		if ((i == 0 && str[i] != n)
-			|| (str[i - 1] == n && str[i] != n && str[i] != '\0'))
-			count++;
 		i++;
+		if (str[i - 1] == n && str[i] != n && str[i] != '\0')
+			count++;
 	}
 	return (count);
 }
@@ -78,14 +79,10 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char **arr;
 
-// 	arr = ft_split("helloxxxxxxx", 'x');
+// 	arr = ft_split(" Tripouille", ' ');
 
 // 	int i = 0;
-// 	while (i <= 3)
-// 	{
-// 	printf("%i == %s\n",i, arr[i]);
-// 	i++;
-// 	}
-// 	free(arr);
+
+// 	printf("%i == %s\n",i, strcmp(arr[0], "Tripouille"));
 
 // }
